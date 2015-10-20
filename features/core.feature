@@ -23,7 +23,7 @@ Feature:
           Then I
       """
     And the following step definitions:
-      | /.*/ | () => {} |
+      | .* | () => {} |
     When Funcuke runs
     Then Funcuke should succeed
 
@@ -37,6 +37,6 @@ Feature:
           Then C
       """
     And the following step definitions:
-      | /.*/ | () => {} |
+      | .* | () => {} |
     When Funcuke runs
     Then Funcuke should fail

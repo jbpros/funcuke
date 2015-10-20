@@ -14,7 +14,8 @@ export default function () {
   this.Given(/^the following step definitions:$/, function (stepDefinitions) {
     this.stepDefinitions = []
     stepDefinitions.raw().forEach((stepDefinition) => {
-      this.stepDefinitions.push([new RegExp(stepDefinition[0]), stepDefinition[1]])
+      console.log(new RegExp(stepDefinition[0]).exec('A'))
+      this.stepDefinitions.push({ regExp: new RegExp(stepDefinition[0]), fn: stepDefinition[1]})
     })
   })
 
